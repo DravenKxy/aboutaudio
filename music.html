@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>music</title>
+    <link rel="stylesheet" href="css/iconfont.css">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    body, html, img, .box, .box > li, .zhaozao {
+        width: 100%;
+        height: 100%;
+    }
+
+    .box > li {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        opacity: 0;
+    }
+    .tudaxian{
+        opacity: 1!important;
+    }
+
+    .zhaozao {
+        background: #000;
+        opacity: 0.9;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    .jiemian {
+        position: fixed;
+        left: 10%;
+        top:10%;
+        z-index: 2;
+        width: 80%;
+        height: 80%;
+        border: 1px solid skyblue;
+    }
+    .shang,.xia,.start{
+        position: fixed;
+        bottom: 15%;
+        z-index: 2;
+        width: 60px;
+        height: 60px;
+        border: 1px solid white;
+        border-radius: 50%;
+        color: white;
+        line-height: 60px;
+        text-align: center;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .shang{
+        left: 15%;
+    }
+    .start{
+        left: 20%;
+    }
+    .xia{
+        left: 25%;
+    }
+    .jingdu{
+        height: 2px;
+        position: fixed;
+        left: 32%;
+        bottom:19%;
+        z-index: 2;
+    }
+    .jingdu1{
+        width: 500px;
+        background:#000 ;
+        z-index: 3;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .jingdu2{
+        width: 500px;
+        background:#333 ;
+    }
+    .jingdu3{
+        width: 0px;
+        background:#666 ;
+    }
+    .shijian{
+        position: fixed;
+        left: 35%;
+        bottom:15%;
+        z-index: 2;
+        width: 150px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        color: white;
+        font-size: 16px;
+    }
+    .cat{
+        position: fixed;
+        right: 12%;
+        top:12%;
+        z-index: 2;
+        width: 300px;
+        height: 70%;
+        border: 1px solid #BEBEBE;
+        padding: 5px;
+    }
+    .cat>li{
+        width: 90%;
+        height: auto;
+        border-bottom: 1px solid #666;
+        padding: 10px;
+        text-align: left;
+        color: white;
+        font-size: 20px;
+cursor: pointer;
+    }
+    .tu{
+        position: fixed;
+        left: 28%;
+        top:25%;
+        z-index: 2;
+        width: 20%;
+        height:40%;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    .tu>li{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 50%;
+        left: 0;
+        top:0;
+        opacity: 0;
+    }
+    .tuxian{
+        opacity: 0.8!important;
+    }
+    .tu>li>img{
+        border-radius: 50%;
+    }
+    .yinliang,.xunhuan,.liebiao{
+        position: fixed;
+        left: 11%;
+        z-index: 2;
+        width: 30px;
+        height: 30px;
+        border: 1px solid white;
+        border-radius: 50%;
+        color: white;
+        line-height: 30px;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .yinliang{
+        top:22%;
+    }
+    .yinbox{
+        position: fixed;
+        top:24%;
+        left: 14%;
+        z-index: 2;
+        width: 100px;
+        height: 3px;
+        background: #333;
+    }
+    .yinbox1{
+        z-index: 3;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .yinbox3{
+        width: 10px;
+        background: #666;
+    }
+    .xunhuan{
+        top:17%;
+    }
+    .liebiao{
+        top:12%;
+    }
+audio{
+    position: fixed;
+    z-index: 3;
+}
+</style>
+<body>
+<audio src="music/Alan Walker - Baby Don't Go.mp3" controls></audio>
+<div class="box">
+    <li class="tudaxian"><img src="img/1.jpg" alt=""></li>
+    <li><img src="img/2.jpg" alt=""></li>
+    <li><img src="img/3.jpg" alt=""></li>
+    <li><img src="img/4.jpg" alt=""></li>
+    <li><img src="img/5.jpg" alt=""></li>
+    <div class="zhaozao"></div>
+    <div class="jiemian"></div>
+
+
+    <div class="shang iconfont">&#xe629;</div>
+    <div class="start iconfont">&#xe67d;</div>
+    <div class="xia iconfont">&#xe62a;</div>
+    <div class="yinliang iconfont">&#xe62f;</div>
+    <div class="xunhuan iconfont">&#xe600;</div>
+    <div class="liebiao iconfont">&#xe608;</div>
+
+    <div class="yinbox yinbox1"></div>
+    <div class="yinbox yinbox2"></div>
+    <div class="yinbox yinbox3"></div>
+
+
+    <div class="jingdu jingdu1"></div>
+    <div class="jingdu jingdu2"></div>
+    <div class="jingdu jingdu3"></div>
+    <div class="shijian"><span><span>00</span>:<span>00</span></span>&nbsp;&nbsp;/&nbsp;&nbsp;<span><span>00</span>:<span>00</span></span></div>
+
+
+    <ul class="cat">
+        <li>asd-ada</li>
+        <li>asdasdda</li>
+        <li>dgrhfh</li>
+        <li>te rtgdgd</li>
+        <li>ryhfd erer</li>
+    </ul>
+    <ul class="tu">
+        <li class="tuxian"><img src="img/1.jpg" alt=""></li>
+        <li><img src="img/2.jpg" alt=""></li>
+        <li><img src="img/3.jpg" alt=""></li>
+        <li><img src="img/4.jpg" alt=""></li>
+        <li><img src="img/5.jpg" alt=""></li>
+    </ul>
+</div>
+</body>
+</html>
+<script>
+    let bas=[{id:0,name:'张杰',geming:'三生三世',src:"music/张杰三生三世.mp3"},{id:1,name:'沙宝亮',geming:'暗香',src:"music/沙宝亮暗香.mp3"},{id:2,name:'李玉刚',geming:'刚好遇见你',src:"music/李玉刚刚好遇见你.mp3"},{id:3,name:'松野',geming:'遇见',src:"music/孙燕姿遇见.mp3"},{id:4,name:'Alan',geming:"Baby Do Go",src:"music/Alan Walker - Baby Don't Go.mp3"}]
+
+    let liebiao=document.querySelectorAll(".cat>li")
+    let tuxiao=document.querySelectorAll(".tu>li")
+    let tuda=document.querySelectorAll(".box>li")
+    for (let i=0;i<liebiao.length;i++){
+        liebiao[i].innerHTML=`${bas[i].name}-${bas[i].geming}`
+    }
+
+    let index=0
+    let audio=document.querySelector("audio")
+    let jindu=document.querySelector(".jingdu3")
+    let shijian=document.querySelector(".shijian")
+    let start=document.querySelector(".start")
+
+    function move() {
+        if (audio.paused){
+            tuda[index].classList.add("tudaxian")
+            tuxiao[index].classList.add("tuxian")
+            audio.src=bas[index].src
+            audio.play()
+            liebiao[index].style.color="red"
+            start.innerHTML=`&#xe652;`
+        }else {
+            audio.src=bas[index].src
+            audio.pause()
+            liebiao[index].style.color="white"
+            start.innerHTML=`&#xe67d;`
+        }
+    }
+    start.onclick=function () {
+        move()
+    }
+    let dafen,damiao,xiaofen,xiaomiao;
+    let width=document.querySelector(".jingdu1").offsetWidth
+    audio.ontimeupdate=function () {
+        let achang=Math.trunc(audio.duration)
+        let achang1=Math.trunc(audio.currentTime)
+         dafen=Math.trunc(achang/60)>=10? Math.trunc(achang/60):"0"+Math.trunc(achang/60)
+         damiao=Math.trunc(achang%60)>=10? Math.trunc(achang%60):"0"+Math.trunc(achang%60)
+         xiaofen=Math.trunc(achang1/60)>=10? Math.trunc(achang1/60):"0"+Math.trunc(achang1/60)
+         xiaomiao=Math.trunc(achang1%60)>=10? Math.trunc(achang1%60):"0"+Math.trunc(achang1%60);
+        if(!dafen.includes("NaN")){
+            jindu.style.width=achang1/achang*width+"px"
+            shijian.firstElementChild.firstElementChild.innerHTML=`${xiaofen}`
+            shijian.firstElementChild.lastElementChild.innerHTML=`${xiaomiao}`
+            shijian.lastElementChild.firstElementChild.innerHTML=`${dafen}`
+            shijian.lastElementChild.lastElementChild.innerHTML=`${damiao}`
+        }
+        if(dafen==xiaofen&&damiao==xiaomiao){
+            move1()
+        }
+    }
+
+
+    let xia=document.querySelector(".xia")
+    let shang=document.querySelector(".shang")
+    function move1() {
+        index++
+        if (index>bas.length){
+            index=0
+        }
+        audio.src=bas[index].src
+        audio.play()
+        tuda[index-1].classList.remove("tudaxian")
+        tuxiao[index-1].classList.remove("tuxian")
+        tuda[index].classList.add("tudaxian")
+        tuxiao[index].classList.add("tuxian")
+        liebiao[index-1].style.color="white"
+        liebiao[index].style.color="red"
+        start.innerHTML=`&#xe652;`
+    }
+    xia.onclick=function () {
+      move1()
+    }
+    function move2() {
+        index--
+        if (index<0){
+            index=bas.length-1
+        }
+        audio.src=bas[index].src
+        audio.play()
+        tuda[index+1].classList.remove("tudaxian")
+        tuxiao[index+1].classList.remove("tuxian")
+        tuda[index].classList.add("tudaxian")
+        tuxiao[index].classList.add("tuxian")
+        liebiao[index+1].style.color="white"
+        liebiao[index].style.color="red"
+        start.innerHTML=`&#xe652;`
+    }
+    shang.onclick=function () {
+       move2()
+    }
+
+    let jinduda=document.querySelector(".jingdu1")
+    jinduda.onclick=function (e) {
+        let weizhi=e.offsetX;
+        jindu.style.width=weizhi+"px"
+        audio.currentTime=weizhi/width*audio.duration
+    }
+
+    let yin=document.querySelector(".yinbox3")
+    let yinda=document.querySelector(".yinbox1")
+    let widthyin=yinda.offsetWidth
+    let weiyin=audio.volume*10
+    yinda.onclick=function (e) {
+         weiyin=e.offsetX;
+        yin.style.width=weiyin+"px"
+        audio.volume=weiyin/widthyin
+    }
+    let yinliang=document.querySelector(".yinliang")
+    yinliang.onclick=function () {
+        if(audio.volume!=0){
+            yinliang.style.color="red"
+            yin.style.width=0
+            audio.volume=0
+        }else {
+            yinliang.style.color="white"
+            yin.style.width=weiyin+"px"
+            audio.volume=weiyin/widthyin
+        }
+    }
+
+  liebiao.forEach(function (a,b) {
+      a.ondblclick=function () {
+          liebiao.forEach(function (m,n) {
+              m.style.color="white"
+              tuda[n].classList.remove("tudaxian")
+              tuxiao[n].classList.remove("tuxian")
+          })
+          index=b
+          audio.src=bas[index].src
+          audio.play()
+          tuda[index].classList.add("tudaxian")
+          tuxiao[index].classList.add("tuxian")
+          liebiao[index].style.color="red"
+          start.innerHTML=`&#xe652;`
+      }
+  })
+
+
+</script>
